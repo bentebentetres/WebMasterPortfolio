@@ -248,6 +248,7 @@ section {
     position: relative;
     width: 100%;
     padding: 50px 20px;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,6 +337,7 @@ section {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     margin-left: 100px;
+    margin-bottom: 20px;
     border-style: solid;
     border-color: #fff;
 }
@@ -398,7 +400,7 @@ footer .social-links a:hover {
 }
 
 
-/* FOR MOBILE PHONES */
+
 @media screen and (max-width: 600px)
 {
     .typing-text span {
@@ -448,32 +450,34 @@ footer .social-links a:hover {
     }
 
     .abouts {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; /* Ensure everything stacks */
         align-items: center;
         padding: 20px 10px;
     }
 
     .aboutTITLE {
-        font-size: 1.8rem; /* Adjust title size */
-        margin-bottom: 20px;
+        font-size: 1.5rem; /* Smaller title size */
+        margin-top: 50px;
     }
 
     .aboutImages {
-        width: 200px; /* Reduce image size */
+        width: 200px; /* Smaller image for mobile */
         height: 200px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        opacity:0;
     }
 
     .about-details-container {
         flex-direction: column; /* Stack cards vertically */
-        width: 100%; /* Full width on mobile */
-        gap: 15px; /* Add space between stacked cards */
+        gap: 10px; /* Add spacing between cards */
     }
 
     .card {
-        width: 90%; /* Full width with margin */
-        margin: 0 auto; /* Center cards */
+        width: 90%; /* Full width of the screen */
+        padding: 15px; /* Smaller padding for mobile */
+        margin-left: 20px;
     }
+
 }
 
 
