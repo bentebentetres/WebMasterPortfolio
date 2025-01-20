@@ -291,10 +291,10 @@ section {
     padding: 20px 100px;
     border-radius: 10px;
     background-color: #333;
-    color:#f7f7f7;
+    color: #f7f7f7;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: height 0.4s ease, box-shadow 0.3s ease;
+    transition: height 0.4s ease, box-shadow 0.3s ease, background 0.3s ease;
     overflow: hidden;
     cursor: pointer;
 }
@@ -316,6 +316,12 @@ section {
 .card:hover {
     height: 300px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-image: url('UC.jpg'); /* Use the desired image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6); /* Add a dark overlay effect */
+    background-blend-mode: multiply;
 }
 
 .card:hover .card-content {
@@ -323,11 +329,15 @@ section {
     transform: translateY(0);
 }
 
-.card-content p {
-    color: #FEE715;
+.card:hover {
+    background-opacity: 0.3; /* Set low opacity for the image overlay */
 }
 
-.card-content span{
+.card-content p {
+    color: #fee715;
+}
+
+.card-content span {
     color: rgb(0, 255, 64);
     font-weight: bold;
     font-size: 1.3rem;
@@ -524,6 +534,7 @@ footer .social-links a:hover {
         width: 200px; /* Smaller image for mobile */
         height: 200px;
         margin-bottom: 40px;
+
     }
 
     .about-details-container {
