@@ -434,8 +434,8 @@ footer .social-links a:hover {
     }
 
     .main-container .content {
-        width: 90%; /* Content takes up more space */
-        text-align: center; /* Center-align text */
+        width: 90%; 
+        text-align: center;
     }
 
     .content h1 {
@@ -445,6 +445,34 @@ footer .social-links a:hover {
 
     .typing-text span {
         font-size: 1.8rem;
+    }
+
+    .abouts {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .aboutTITLE {
+        font-size: 1.8rem; /* Adjust title size */
+        margin-bottom: 20px;
+    }
+
+    .aboutImages {
+        width: 200px; /* Reduce image size */
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .about-details-container {
+        flex-direction: column; /* Stack cards vertically */
+        width: 100%; /* Full width on mobile */
+        gap: 15px; /* Add space between stacked cards */
+    }
+
+    .card {
+        width: 90%; /* Full width with margin */
+        margin: 0 auto; /* Center cards */
     }
 }
 
