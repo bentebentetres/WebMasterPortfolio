@@ -27,7 +27,7 @@ section::before {
     display: flex;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: auto; 
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: -1;
@@ -253,7 +253,6 @@ section {
     justify-content: center;
     align-items: center;
     transition: all 1s;
-    opacity: 0;
 }
 
 .show {
@@ -290,7 +289,7 @@ section {
     padding: 20px 100px;
     border-radius: 10px;
     background-color: #333;
-    color:#FEE715;
+    color:#f7f7f7;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: height 0.4s ease, box-shadow 0.3s ease;
@@ -322,10 +321,20 @@ section {
     transform: translateY(0);
 }
 
+.card-content p {
+    color: #FEE715;
+}
+
 .card-content span{
     color: rgb(0, 255, 64);
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+.project-links a {
+    color: #FEE715;
+    font-size: 30px;
+    margin-top: 200px ;
 }
 
 .aboutImages {
