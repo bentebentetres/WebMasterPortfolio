@@ -339,6 +339,18 @@ section {
     margin-top: 200px ;
 }
 
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
 .aboutImages {
     position: relative;
     width: 300px;
@@ -346,11 +358,19 @@ section {
     overflow: hidden;
     border-radius: 10%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    margin-left: 100px;
-    margin-bottom: 20px;
-    border-style: solid;
-    border-color: #fff;
+    transition: transform 0.5s ease; /* Smooth movement */
+    cursor: pointer;
+}
+
+.aboutImages.active {
+    transform: translateX(-150px); /* Move to the left */
+}
+
+.aboutImages img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
 .aboutImages:hover {
@@ -384,6 +404,32 @@ section {
     opacity: 1;
 }
 
+#biodata {
+    position: relative;
+    width: 0; /* Start hidden */
+    max-width: 300px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#biodata.show {
+    width: 300px; 
+    padding: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.about-container.clicked {
+    gap: 150px; 
+}
 
 footer {
     background-color: #222;
@@ -410,6 +456,8 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #00bcd4;
 }
+
+
 
 
 
@@ -476,7 +524,6 @@ footer .social-links a:hover {
         width: 200px; /* Smaller image for mobile */
         height: 200px;
         margin-bottom: 40px;
-        opacity:0;
     }
 
     .about-details-container {
